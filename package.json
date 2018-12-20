@@ -1,0 +1,14 @@
+{
+  "name": "pro_drone",
+  "version": "1.0.0",
+  "description": "Pro Drone Film & Photography",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Patrik Ratzlaff",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
