@@ -1,4 +1,4 @@
-$primary-color: #444;
+@import "config";
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-  background-color: #3b5998;
+  background-color: darken($primary-color, 10);
   overflow: hidden;
   height: 63px;
 }
@@ -15,7 +15,7 @@ body {
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -28,8 +28,10 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: $secondary-color;
   color: #000;
+  @include easeOut;
+  border-radius: 5px;
 }
 
 .side-nav {
@@ -43,20 +45,20 @@ body {
   opacity: 0.9;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
+  @include easeOut;
 }
 
 .side-nav a {
   padding: 10px 10px 10px 30px;
   text-decoration: none;
   font-size: 22px;
-  color: #ccc;
+  color: #eee;
   display: block;
-  transition: 0.3s;
+  @include easeOut;
 }
 
 .side-nav a:hover {
-  color: #fff;
+  color: $secondary-color;
 }
 
 .side-nav .btn-close {
